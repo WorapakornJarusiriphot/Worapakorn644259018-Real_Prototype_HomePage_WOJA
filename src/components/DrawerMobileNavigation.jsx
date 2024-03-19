@@ -83,7 +83,7 @@ export default function DrawerMobileNavigation() {
           sx={{
             flex: 'none',
             fontSize: 'xl',
-            '& > div': { justifyContent: 'center' },
+            '& > div': { justifyContent: 'lift' },
           }}
         >
           <ListItemButton sx={{ fontWeight: 'lg' }}><HomeRoundedIcon />หน้าแรก</ListItemButton>
