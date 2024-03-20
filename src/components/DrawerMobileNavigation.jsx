@@ -46,7 +46,7 @@ export default function DrawerMobileNavigation() {
         </Box>
         <Input
           size="sm"
-          placeholder="ค้นหา ผู้ใช้ ร้านค้า ตำแหน่ง หรือเกม"
+          placeholder="ค้นหาโพสต์"
           variant="plain"
           endDecorator={<Search />}
           slotProps={{

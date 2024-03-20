@@ -120,9 +120,9 @@ function Filter() {
           fullWidth
           type="search"
           id="default-search"
-          label="ค้นหา"
+          label="ค้นหาโพสต์"
           variant="outlined"
-          placeholder="ค้นหา ผู้ใช้ ร้านค้า ตำแหน่ง หรือเกม"
+          placeholder="ค้นหาโพสต์"
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
@@ -209,7 +209,7 @@ function Filter() {
                   )}
                 />
               </DemoItem>
-              <DemoItem
+              {/* <DemoItem
                 label={
                   <Label componentName="ค้นหาวันและเวลาที่เล่น" valueType="date time" />
                 }
@@ -223,7 +223,7 @@ function Filter() {
                     />
                   )}
                 />
-              </DemoItem>
+              </DemoItem> */}
             </DemoContainer>
           </ThemeProvider>
         </LocalizationProvider>
