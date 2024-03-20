@@ -183,12 +183,14 @@ function Filter() {
         <br />
 
         <FormControl fullWidth>
-          <InputLabel id="number-select-label">ค้นหาจำนวนคน</InputLabel>
+          <InputLabel id="number-select-label">
+            จำนวนผู้เล่นที่ว่างตั้งแต่
+          </InputLabel>
           <Select
             labelId="number-select-label"
             id="number-select"
             value={number}
-            label="ค้นหาจำนวนคน"
+            label="จำนวนผู้เล่นที่ว่างตั้งแต่"
             onChange={handleChange}
           >
             {/* วนลูปเพื่อสร้าง MenuItem สำหรับตัวเลือกตั้งแต่ 1 ถึง 75 */}
@@ -199,6 +201,7 @@ function Filter() {
             ))}
           </Select>
         </FormControl>
+
         <br />
         <br />
         {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
