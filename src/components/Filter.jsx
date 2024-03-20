@@ -125,6 +125,10 @@ function Filter() {
 
   const currencies = [
     {
+      value: "โพสต์ทั้งหมด",
+      label: "โพสต์ทั้งหมด",
+    },
+    {
       value: "โพสต์นัดเล่น",
       label: "โพสต์นัดเล่น",
     },
