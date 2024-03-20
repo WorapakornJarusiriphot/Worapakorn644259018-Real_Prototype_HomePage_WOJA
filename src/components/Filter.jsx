@@ -112,6 +112,28 @@ function Filter() {
     setNumber(event.target.value);
   };
 
+  const [selectedCurrency, setSelectedCurrency] = useState(""); // เพิ่มตัวแปร state นี้
+
+  const handleNumberChange = (event) => {
+    setNumber(event.target.value);
+  };
+
+  const handleCurrencyChange = (event) => {
+    // สร้างฟังก์ชัน handleCurrencyChange
+    setSelectedCurrency(event.target.value);
+  };
+
+  const currencies = [
+    {
+      value: "โพสต์นัดเล่น",
+      label: "โพสต์นัดเล่น",
+    },
+    {
+      value: "โพสต์กิจกรรม",
+      label: "โพสต์กิจกรรม",
+    },
+  ];
+
   return (
     <div>
       <br />
@@ -133,8 +155,29 @@ function Filter() {
           }}
         />
         <br />
+        <br />
+
+        <FormControl fullWidth>
+          <InputLabel id="currency-select-label">ค้นหาประเภทโพสต์</InputLabel>
+          <Select
+            labelId="currency-select-label"
+            id="currency-select"
+            value={selectedCurrency} // ใช้ตัวแปร selectedCurrency ที่นี่
+            label="ค้นหาประเภทโพสต์"
+            onChange={handleCurrencyChange} // เรียกใช้ฟังก์ชัน handleCurrencyChange เมื่อมีการเลือกตัวเลือก
+          >
+            {/* วนลูปเพื่อสร้าง MenuItem */}
+            {currencies.map((currency) => (
+              <MenuItem key={currency.value} value={currency.value}>
+                {currency.label}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
 
         <br />
+        <br />
+
         <FormControl fullWidth>
           <InputLabel id="number-select-label">ค้นหาจำนวนคน</InputLabel>
           <Select
@@ -184,7 +227,9 @@ function Filter() {
               ]}
             >
               <DemoItem
-                label={<Label componentName="ค้นหาวันที่เล่น" valueType="date" />}
+                label={
+                  <Label componentName="ค้นหาวันที่เล่น" valueType="date" />
+                }
               >
                 <DatePicker
                   renderInput={(params) => (
@@ -197,7 +242,9 @@ function Filter() {
                 />
               </DemoItem>
               <DemoItem
-                label={<Label componentName="ค้นหาเวลาที่เล่น" valueType="time" />}
+                label={
+                  <Label componentName="ค้นหาเวลาที่เล่น" valueType="time" />
+                }
               >
                 <TimePicker
                   renderInput={(params) => (
